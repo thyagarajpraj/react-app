@@ -23,7 +23,7 @@ const buildControls = props => (
               removed={() => props.ingredientsRemoved(ctrl.type)}
               disabled={props.disabled[ctrl.type]}
             />
-          );
+          )
         })
     }
     <button
