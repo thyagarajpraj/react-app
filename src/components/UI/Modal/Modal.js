@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-import Auxiliary from '../../../hoc/Auxiliary'
+import Auxiliary from '../../../hoc/Auxiliary/Auxiliary'
 import Backdrop from '../Backdrop/Backdrop'
 import classes from './Modal.css'
 
 class Modal extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show
+  shouldComponentUpdate (nextProps, nextState) {
+    return nextProps.show !== this.props.show || nextProps.children !== this.props.children
   }
 
-  componentDidUpdate() {
+  componentDidUpdate () {
     console.log('[Modal] DidUpdate')
   }
 
-  render() {
+  render () {
     return (
       <Auxiliary>
         <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
