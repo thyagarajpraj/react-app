@@ -18,7 +18,12 @@ export const removeIngredient = (name) => {
 export const setIngredient = (ingredients) => {
     return {
         type: actionTypes.SET_INGREDIENT,
-        ingredients: ingredients
+        ingredients: {
+            salad: ingredients.salad,
+            bacon: ingredients.bacon,
+            cheese: ingredients.cheese,
+            meat: ingredients.meat,
+        }
     }
 }
 
